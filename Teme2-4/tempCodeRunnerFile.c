@@ -1,1 +1,0 @@
-fprintf(g, "\n%4d %6d %-30s %-20s %-30s %d/%hhi/%-10d %.2f", ++crt, obj.numar, obj.denumire, obj.tip, obj.numeGestionar, obj.dataAchizitiei.zi, obj.dataAchizitiei.luna, obj.dataAchizitiei.an, obj.valoare);
