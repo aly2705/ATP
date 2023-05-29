@@ -16,14 +16,14 @@ typedef struct {
 void main()
 {
 	char nameb[30] = "..\\Studenti_s_f2.dat";
-	char namet[30] = "..\\Input.txt";
+	char namet[30] = "Input.txt";
 	FILE* f;
 	FILE *g;
 	STUDENT x;
 	int i;
 		
 	printf("Text file name (used as input): ");
-	gets_s(namet);
+	gets(namet);
 
 	g = fopen(namet, "rt");
 	if (!g)
@@ -31,7 +31,7 @@ void main()
 	else
 	{
 		printf("New binary file name: ");
-		gets_s(nameb);
+		gets(nameb);
 		f = fopen(nameb, "wb");
 
 		fscanf(g,"%d", &x.nrm);
@@ -48,7 +48,7 @@ void main()
 
 			fscanf(g,"%d", &x.grupa);
 			for (i = 0; i < 20; i++)
-				fscanf_s(g, "%hhi", &x.note[i]);
+				fscanf(g, "%hhi", &x.note[i]);
 			fwrite(&x, sizeof(STUDENT), 1, f);
 
 			fscanf(g,"%d", &x.nrm);
